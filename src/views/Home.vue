@@ -13,10 +13,10 @@
           </v-tab-item>
         </v-tabs>
       </v-col>
-      <v-spacer></v-spacer>
+      <!-- <v-spacer></v-spacer>
       <v-col>
-        <v-btn color="red" elevation="2" @click="logout"><v-icon >mdi-arrow-up-bold-box-outline</v-icon></v-btn>
-      </v-col>
+        <v-btn color="" elevation="2" @click="logout"><v-icon >mdi-arrow-up-bold-box-outline</v-icon></v-btn>
+      </v-col> -->
     </v-row>
   </v-container>
 </template>
