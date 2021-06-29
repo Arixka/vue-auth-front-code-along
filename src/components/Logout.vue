@@ -14,6 +14,7 @@ export default {
       localStorage.removeItem("toke");
       localStorage.removeItem("email");
       localStorage.removeItem("role");
+      this.$router.push('/')
     },
   },
 };
