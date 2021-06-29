@@ -17,13 +17,15 @@
       <v-divider></v-divider>
 
       <v-card-actions>
-        <v-btn color="success">Login</v-btn>
+        <v-btn color="success" @click="login">Login</v-btn>
       </v-card-actions>
     </v-card>
   </div>
 </template>
 
 <script>
+import authService from "../services/authService";
+
 export default {
   name: "HelloWorld",
 
@@ -33,5 +35,17 @@ export default {
     snackbar: false,
     snackText: "",
   }),
+  methods: {
+    login() {
+      authService
+        .login(this.email, this.password)
+        .then((res) => {
+          localStorage.setItem("token", res.token);
+          localStorage.setItem("email", res.email);
+          localStorage.setItem("role", res.role);
+        })
+        .catch((err) => console.log(err));
+    },
+  },
 };
 </script>
